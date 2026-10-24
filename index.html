@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flick Flick: Alt+Tab for your browser tabs</title>
+<meta name="description" content="Flick back to your last tab with Alt+Q. Hold it to pick any recent tab, peek at links with Glance, and get vertical tabs, a volume booster, screenshots, focus and more in one light extension.">
+<meta property="og:title" content="Flick Flick: Alt+Tab for your browser tabs">
+<meta property="og:description" content="Alt+Q flicks to your last tab. Hold it to pick any recent tab. Click any link to peek at it in a floating window.">
+<meta property="og:image" content="icon.png">
+<link rel="icon" href="favicon.png">
+<link rel="preload" href="fonts/doto.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap top">
+  <a class="brand" href="index.html"><img src="icon.png" alt="">Flick Flick</a>
+  <nav aria-label="Main"><a href="#keys">Keys</a><a href="#features">Features</a><a href="#faq">Questions</a><a href="privacy.html">Privacy</a>
+    <a class="btn" href="https://chromewebstore.google.com/detail/ccjfgehimibjhjfbncilcfpdpnaibkml">Add to Chrome</a></nav>
+</div>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1>Flick<br>back.</h1>
+      <p class="lede">Alt+Q takes you to the tab you were just on. Hold it to pick any recent tab, the way Alt+Tab picks a window.</p>
+      <div class="cta">
+        <a class="btn" href="https://chromewebstore.google.com/detail/ccjfgehimibjhjfbncilcfpdpnaibkml">Add to Chrome, free</a>
+        <a class="btn ghost" href="#keys">See the keys</a>
+      </div>
+      <p class="small">Works in Chrome, Edge, Brave, Vivaldi, Opera and Arc. A one-minute tour shows you everything after you install.</p>
+    </div>
+
+    <div class="demo" aria-label="Try Flick Flick here">
+      <div class="browser">
+        <div class="strip" id="strip"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div></div>
+        <div class="view" id="view">
+          <div class="sw" id="sw" role="listbox" aria-label="Switch tab"><div class="panel" id="panel"></div></div>
+          <div class="gl" id="gl" hidden role="dialog" aria-label="Glance">
+            <div class="bar"><span class="host">brief.quillpad.app</span><button type="button" id="gl-keep">Open</button><button type="button" id="gl-split">Split</button><button type="button" id="gl-close" aria-label="Close Glance">×</button></div>
+            <div class="body" style="padding:18px 22px"><h3 style="margin:0 0 10px;font-size:20px">Launch brief</h3>
+              <p style="margin:0 0 8px;font-size:13px;color:var(--ink-2)">Three steps: a guided first run, smarter defaults, and a weekly digest. One owner and one date for each.</p>
+              <p style="margin:0;font-size:13px;color:var(--ink-2)">Glance lets you read this without leaving your page. Open it full size or side by side, and nothing reloads. Press Esc twice to close it.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="keys">
+        <button class="key" id="k-alt" type="button" aria-pressed="false" aria-label="Alt key: tap to hold it down">Alt</button><span class="plus" aria-hidden="true">+</span>
+        <button class="key" id="k-q" type="button" aria-label="Q key">Q</button>
+      </div>
+      <p class="hint" id="hint" aria-live="polite">Try it: hold Alt and tap Q. Or tap the keys.</p>
+    </div>
+  </div>
+
+  <section id="keys">
+    <div class="wrap">
+      <p class="kicker">Keys</p>
+      <h2>Seven keys. That is the whole manual.</h2>
+      <p class="intro">Each one does one thing, and none of them replaces a shortcut your browser already has. Change any of them whenever you like.</p>
+      <div class="shortcuts">
+        <div class="sc"><div><kbd>Alt</kbd><kbd>Q</kbd></div><p><strong>Flick to your last tab.</strong> Press it again to flick back.</p></div>
+        <div class="sc"><div>Hold <kbd>Alt</kbd> tap <kbd>Q</kbd> <kbd>Q</kbd></div><p><strong>Pick any recent tab.</strong> Your tabs appear with pictures. Let go, or click one, to open it.</p></div>
+        <div class="sc"><div>Click a link</div><p><strong>Peek with Glance.</strong> The link opens in a floating window. Open it full size or side by side without reloading, or press <kbd>Esc</kbd> twice to close it.</p></div>
+        <div class="sc"><div><kbd>Alt</kbd><kbd>K</kbd></div><p><strong>Open the command bar.</strong> Find any tab, bookmark or page from your history, do quick maths, or type “remind me to call Mom at 6”.</p></div>
+        <div class="sc"><div><kbd>Alt</kbd><kbd>L</kbd></div><p><strong>Copy the link</strong>, with the trackers already removed.</p></div>
+        <div class="sc"><div><kbd>Alt</kbd><kbd>P</kbd></div><p><strong>Picture in picture</strong> for the video on the page.</p></div>
+        <div class="sc"><div><kbd>Alt</kbd><kbd>/</kbd></div><p><strong>See every shortcut</strong> on any page, any time.</p></div>
+      </div>
+      <p class="small">On a Mac, Alt is the Option key (⌥).</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <p class="kicker">Features</p>
+      <h2>One extension instead of a toolbar full.</h2>
+      <p class="intro">The best ideas from Arc, Zen and PowerToys, in any Chromium browser. Turn on what you want, ignore the rest.</p>
+      <div class="groups">
+        <div class="group"><h3>Switch and find</h3><p>The Alt+Q switcher, a keyboard-only switcher you type into, and one search box for tabs, archived tabs, bookmarks and history. It does sums and converts units too.</p></div>
+        <div class="group"><h3>Glance, split and sidebar</h3><p>Peek at links in a floating window, put two tabs side by side, and keep vertical tabs with pinned favourites and tab groups in the side panel.</p></div>
+        <div class="group"><h3>Sound and video</h3><p>Volume up to 600% for each tab, playback speed, and picture in picture. Remembered for each site, even after you close the browser.</p></div>
+        <div class="group"><h3>Page tools</h3><p>Screenshots of what you see, an area or the whole page. Colour picker, ruler, font finder, draw on page, show your clicks for recordings, reader view, read aloud, dark mode and translate.</p></div>
+        <div class="group"><h3>Focus and routines</h3><p>Focus sessions that pause distracting sites, screen time with daily limits, reminders in plain words, and gentle water and break routines.</p></div>
+        <div class="group"><h3>Bit Bit, the pet</h3><p>A tiny desk pet with a personality. It shows your focus timer in its eyes, levels up as you work, tells you about your day, and naps when you step away. Asleep until you wake it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap private">
+      <div><p class="kicker">Private and light</p><h2>Your tabs are your business.</h2>
+        <p class="intro" style="margin:0">Nothing you browse ever leaves your computer. No ads, no tracking, no account needed.</p></div>
+      <ul>
+        <li><strong>Stays on your computer.</strong> Settings, notes and screen time live in your browser. Sync is optional, to your own Google Drive.</li>
+        <li><strong>Light by design.</strong> Moving the mouse costs nothing, background tabs cost nothing, and tab pictures are kept in memory only.</li>
+        <li><strong>Changes nothing you know.</strong> Your browser’s own shortcuts and clicks keep working exactly as before.</li>
+        <li><strong>Every feature has a switch.</strong> Keep only what helps you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <p class="kicker">Questions</p>
+      <h2>Good to know.</h2>
+      <details><summary>Why Alt+Q and not Ctrl+Tab?</summary><p>Chrome keeps Ctrl+Tab for itself and lets no extension change it. Alt+Q sits right under your fingers, works the same way, and you can pick any other key on your browser’s shortcuts page.</p></details>
+      <details><summary>Which browsers does it work in?</summary><p>Chrome, Edge, Brave, Vivaldi, Arc and Opera. Opera has no side panel, so vertical tabs are not available there; everything else works.</p></details>
+      <details><summary>Why does it ask to work on all sites?</summary><p>Only so it can show the switcher on the page you are on, open Glance when you click a link, remember your volume for each site, and show the pet. It reads no page content and sends nothing anywhere. It asks once, and you can say no.</p></details>
+      <details><summary>Will it slow my browser down?</summary><p>No. It does almost nothing until you press a key. Mouse movement and background tabs cost nothing, and every feature can be switched off.</p></details>
+      <details><summary>How do I learn it?</summary><p>A one-minute tour opens when you install it. Press Alt+/ on any page to see every shortcut, and take the tour again any time from Settings.</p></details>
+      <details><summary>Is it free?</summary><p>Yes, with no ads and nothing to sign up for.</p></details>
+    </div>
+  </section>
+
+  <div class="wrap end">
+    <h2>Flick back.</h2>
+    <p>Free for Chrome, Edge, Brave, Vivaldi, Opera and Arc.</p>
+    <a class="btn" href="https://chromewebstore.google.com/detail/ccjfgehimibjhjfbncilcfpdpnaibkml">Add to Chrome, free</a>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Flick Flick, by H24 Creationz</span><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:h24creationz@gmail.com">Contact</a></div></footer>
+
+<script>
+(() => {
+  // A small, honest copy of the real thing: the same keys, the same order of recent tabs.
+  const TABS = [
+    { title: 'Q4 launch plan', brand: 'Quillpad', color: '#1F8A5B', head: 'Q4 launch plan', text: ['We ship the new onboarding in three steps.', 'Click the <span class="lnk" data-glance>launch brief</span> to peek at it.'] },
+    { title: 'Inbox (12)', brand: 'Postwell', color: '#2E6FD8', head: 'Inbox', text: ['Maya: Can we move the review to 4?', 'Leo: Flights are booked. Sending details.'] },
+    { title: 'Lo-fi beats to study to', brand: 'Tunewell', color: '#16A34A', head: 'Lo-fi beats to study to', text: ['Now playing: Rainy window, side B.', 'Up next: Quiet library, 42 minutes.'] },
+    { title: 'Flights to Goa', brand: 'Skyway', color: '#C2410C', head: 'Chennai to Goa', text: ['Fri 7:10 AM, nonstop, 1h 35m.', 'Two seats together, window and aisle.'] },
+    { title: 'Sprint 42 board', brand: 'Taskloom', color: '#7A4FD0', head: 'Sprint 42', text: ['To do: 6 · In progress: 4 · Done: 11', 'Next up: the first-run tour.'] }
+  ];
+  const $ = (id) => document.getElementById(id);
+  const strip = $('strip'); const view = $('view'); const sw = $('sw'); const panel = $('panel'); const hint = $('hint'); const gl = $('gl');
+  const kAlt = $('k-alt'); const kQ = $('k-q');
+  let mru = [0, 3, 1, 2, 4];
+  let open = false; let sel = 1; let altDown = false; let latched = false; let qDown = false; let flashT = 0;
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const say = (t) => { hint.textContent = t; };
+
+  // Tabs and pages.
+  TABS.forEach((t, i) => {
+    const el = document.createElement('div'); el.className = 'tab'; el.dataset.i = i;
+    el.innerHTML = `<b style="background:${t.color}"></b><span>${esc(t.title)}</span>`;
+    el.addEventListener('click', () => activate(i));
+    strip.append(el);
+    const pg = document.createElement('div'); pg.className = 'page'; pg.dataset.i = i;
+    pg.innerHTML = `<header style="background:${t.color}">${esc(t.brand)}</header><div class="body"><h3>${esc(t.head)}</h3>${t.text.map((x) => `<p>${x}</p>`).join('')}</div>`;
+    view.insertBefore(pg, sw);
+  });
+  function paint() {
+    const a = mru[0];
+    for (const el of strip.querySelectorAll('.tab')) el.classList.toggle('on', Number(el.dataset.i) === a);
+    for (const pg of view.querySelectorAll('.page')) pg.style.opacity = Number(pg.dataset.i) === a ? '1' : '0';
+    for (const pg of view.querySelectorAll('.page')) pg.style.pointerEvents = Number(pg.dataset.i) === a ? 'auto' : 'none';
+  }
+  function activate(i) { mru = [i, ...mru.filter((x) => x !== i)]; paint(); }
+
+  // The switcher.
+  function drawSw() {
+    panel.innerHTML = mru.map((i, k) => { const t = TABS[i]; return `<div class="card${k === sel ? ' sel' : ''}" role="option" aria-selected="${k === sel}" data-k="${k}"><div class="t"><b style="background:${t.color}"></b><span>${esc(t.title)}</span></div><div class="pv"><i style="background:${t.color}"></i><u></u><u style="width:60%"></u></div></div>`; }).join('');
+  }
+  function step(d = 1) {
+    if (!open) { open = true; sel = 1; sw.classList.add('show'); say('Keep tapping Q. Let go of Alt, or click a tab, to open it.'); }
+    else sel = (sel + d + mru.length) % mru.length;
+    drawSw();
+  }
+  function commit(k = sel) {
+    if (!open) return;
+    open = false; sw.classList.remove('show');
+    const i = mru[k]; activate(i);
+    say(k === 1 ? `Flicked to “${TABS[i].title}”. Press Alt+Q again to flick back.` : `Opened “${TABS[i].title}”.`);
+  }
+  function cancel() { open = false; sw.classList.remove('show'); say('Stayed where you were.'); }
+  function quickFlick() { step(); clearTimeout(flashT); flashT = setTimeout(() => commit(), 140); }
+  panel.addEventListener('click', (e) => { const c = e.target.closest('.card'); if (c) { e.stopPropagation(); commit(Number(c.dataset.k)); latched = false; kAlt.setAttribute('aria-pressed', 'false'); } });
+  sw.addEventListener('click', () => cancel());
+
+  // Glance.
+  let escAt = 0;
+  const glanceOpen = () => { gl.hidden = false; escAt = 0; say('That is Glance. Open it full size or side by side, or press Esc twice to close it.'); };
+  view.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-glance]')) return;
+    glanceOpen();
+  });
+  $('gl-close').addEventListener('click', () => { gl.hidden = true; say('Closed. You never left your page.'); });
+  $('gl-keep').addEventListener('click', () => { gl.hidden = true; say('Now a normal tab, right where you left it. Nothing reloaded.'); });
+  $('gl-split').addEventListener('click', () => { gl.hidden = true; say('Side by side with your page. Nothing reloaded.'); });
+  const arm = (on) => { for (const l of view.querySelectorAll('[data-glance]')) l.classList.toggle('armed', on); };
+
+  // Your keyboard.
+  const typing = (t) => t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+  addEventListener('keydown', (e) => {
+    if (typing(e.target)) return;
+    if (e.key === 'Alt') { altDown = true; kAlt.classList.add('down'); e.preventDefault(); return; }
+    if (e.code === 'KeyQ' && (e.altKey || altDown)) { e.preventDefault(); if (!e.repeat) { kQ.classList.add('down'); step(); } return; }
+    if (open && e.code === 'Backquote') { e.preventDefault(); step(-1); return; }
+    if (open && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) { e.preventDefault(); step(e.key === 'ArrowRight' ? 1 : -1); return; }
+    if (open && e.key === 'Enter') { e.preventDefault(); commit(); return; }
+    if (e.key === 'Escape') { if (open) { cancel(); return; } if (!gl.hidden) { if (Date.now() - escAt < 2500) { gl.hidden = true; say('Closed. You never left your page.'); } else { escAt = Date.now(); say('Press Esc again to close Glance.'); } } }
+  });
+  addEventListener('keyup', (e) => {
+    if (e.key === 'Alt') { altDown = false; kAlt.classList.remove('down'); e.preventDefault(); if (open && !latched) commit(); }
+    if (e.code === 'KeyQ') { qDown = false; kQ.classList.remove('down'); arm(false); }
+  });
+  addEventListener('blur', () => { altDown = false; qDown = false; kAlt.classList.remove('down'); kQ.classList.remove('down'); arm(false); });
+
+  // The keys on the screen, for touch and mouse.
+  kAlt.addEventListener('click', () => {
+    latched = !latched; kAlt.setAttribute('aria-pressed', String(latched));
+    if (latched) say('Alt is held. Now tap Q, and tap it again to move.');
+    else if (open) commit(); else say('Try it: hold Alt and tap Q. Or tap the keys.');
+  });
+  kQ.addEventListener('click', () => {
+    kQ.classList.add('down'); setTimeout(() => kQ.classList.remove('down'), 120);
+    if (latched) step(); else quickFlick();
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>
